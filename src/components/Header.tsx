@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
-import { ButtonLink } from "./Button";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 
@@ -15,7 +14,7 @@ function MobileNavigation() {
             <span className="sr-only">Toggle Navigation</span>
             <svg
               aria-hidden="true"
-              className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+              className="h-3.5 w-3.5 overflow-visible stroke-slate-500"
               fill="none"
               strokeWidth={2}
               strokeLinecap="round"
@@ -61,21 +60,18 @@ function MobileNavigation() {
               >
                 <li>
                   <a href="#features" className="block w-full" onClick={() => close()}>
-                    Features
+                    Home
                   </a>
                 </li>
                 <li>
                   <a href="#testimonials" className="block w-full" onClick={() => close()}>
-                    Testimonials
+                    Projects
                   </a>
                 </li>
                 <li>
                   <a href="#pricing" className="block w-full" onClick={() => close()}>
-                    Pricing
+                    Contact
                   </a>
-                </li>
-                <li className="border-t border-slate-300/40 pt-4">
-                  <a href="/login" className="block w-full">Sign in</a>
                 </li>
               </Popover.Panel>
             </Transition.Child>
@@ -88,44 +84,32 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-10">
+    <header className="py-5">
       <Container>
         <nav className="relative z-50 text-sm">
           <ul className="flex items-center">
             <li>
               <a href="#">
                 <span className="sr-only">Home</span>
-                <Logo className="h-10 w-auto" />
+                <Logo />
               </a>
             </li>
             <li className="ml-12 hidden md:block">
-              <a href="#features" className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                Features
+              <a href="#features" className="rounded-lg py-1 px-2 dark:text-slate-100 dark:hover:bg-slate-700">
+                Home
               </a>
             </li>
             <li className="ml-6 hidden md:block">
-              <a href="#testimonials" className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                Testimonials
+              <a href="#testimonials" className="rounded-lg py-1 px-2 dark:text-slate-100 dark:hover:bg-slate-700">
+                Projects
               </a>
             </li>
             <li className="ml-6 hidden md:block">
-              <a href="#pricing" className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                Pricing
+              <a href="#pricing" className="rounded-lg py-1 px-2 dark:text-slate-100 dark:hover:bg-slate-700">
+                Contact
               </a>
             </li>
-            <li className="ml-auto hidden md:block">
-              <a href="/login" className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                Sign in
-              </a>
-            </li>
-            <li className="ml-auto md:ml-8">
-              <ButtonLink href="/register" color="blue">
-                <span>
-                  Get started<span className="hidden lg:inline"> today</span>
-                </span>
-              </ButtonLink>
-            </li>
-            <li className="ml-5 -mr-1 md:hidden">
+            <li className="ml-auto -mr-1 md:hidden">
               <MobileNavigation />
             </li>
           </ul>
