@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
-import { Container } from "./Container";
 import { Logo } from "./Logo";
 
 function MobileNavigation() {
@@ -14,7 +13,7 @@ function MobileNavigation() {
             <span className="sr-only">Toggle Navigation</span>
             <svg
               aria-hidden="true"
-              className="h-3.5 w-3.5 overflow-visible stroke-slate-500"
+              className="h-3.5 w-3.5 overflow-visible stroke-slate-200"
               fill="none"
               strokeWidth={2}
               strokeLinecap="round"
@@ -84,8 +83,8 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-8">
-      <Container>
+    <header className="fixed top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
         <nav className="relative z-50 text-sm">
           <ul className="flex items-center">
             <li>
@@ -114,7 +113,7 @@ export function Header() {
             </li>
           </ul>
         </nav>
-      </Container>
+      </div>
     </header>
   );
 }
