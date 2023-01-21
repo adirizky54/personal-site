@@ -16,12 +16,12 @@ export function Hero() {
           className={clsx([
             "absolute bottom-0",
             "flex flex-col items-stretch flex-shrink-0 basis-0",
-            "min-h-0 min-w-0 w-full h-5/6 opacity-10",
+            "min-h-0 min-w-0 w-full h-3/5 opacity-10",
             "bg-[url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoAQMAAAC2MCouAAAABlBMVEWBgYFHcEyMaNnGAAAAAnRSTlP/AOW3MEoAAAAQSURBVHgBY4CA+v9AMBJIALryrr41QoYVAAAAAElFTkSuQmCC)]",
             "gradient-mask-t-20",
           ])}
         />
-        <div className="relative flex flex-col items-stretch flex-shrink-0 basis-0 w-full mx-auto max-w-md px-4 md:max-w-xl lg:max-w-4xl sm:px-6 lg:px-8 pt-52 pb-20">
+        <div className="relative flex flex-col items-stretch flex-shrink-0 basis-0 w-full mx-auto max-w-md px-4 md:max-w-xl lg:max-w-4xl sm:px-6 lg:px-8 pt-52 pb-24">
           <div className="text-center">
             <p className="text-xl md:text-2xl text-white font-semibold mb-4">Hey, I'm Adi Rizky 🤘</p>
             <h1 className="text-5xl font-extrabold tracking-tight text-white leading-[1.1] lg:text-7xl lg:leading-[1.125em] lg:tracking-[-0.0375em]">
