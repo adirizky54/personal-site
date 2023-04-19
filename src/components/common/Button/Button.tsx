@@ -7,6 +7,9 @@ import { cn } from "~/lib/utils";
 export interface ButtonProps extends ButtonVariants, ComponentProps<'button'> {
   /** Set the icon component of button */
   icon?: JSX.Element;
+
+  /** Set position icon, default: "left" */
+  iconPosition?: "left" | "right";
 }
 
 export function Button({
@@ -31,10 +34,10 @@ export function Button({
         props.className,
       )}
     >
-      {(icon) && (
+      {(icon && props.iconPosition === "left") && (
         <span
           className={cn(
-            typeof children !== 'undefined' ? "-ml-1 mr-2" : undefined,
+            typeof children !== 'undefined' ? "mr-2" : undefined,
             buttonIconStyle({
               size,
             }),
@@ -44,6 +47,18 @@ export function Button({
         </span>
       )}
       <span>{children}</span>
+      {(icon && props.iconPosition === "right") && (
+        <span
+          className={cn(
+            typeof children !== 'undefined' ? "ml-2" : undefined,
+            buttonIconStyle({
+              size,
+            }),
+          )}
+        >
+          {icon}
+        </span>
+      )}
     </button>
   )
 }

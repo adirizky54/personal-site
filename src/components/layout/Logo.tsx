@@ -17,7 +17,7 @@ export function Logo({ active = false }) {
       </div>
       <div className="hidden text-lg sm:block">
         <span className="text-slate-900 dark:text-slate-200">
-          Adi Rizky
+          {/* Adi Rizky */}
         </span>
       </div>
     </div>
