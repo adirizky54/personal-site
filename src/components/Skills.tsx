@@ -15,6 +15,7 @@ export function Skills() {
                 "p-6 rounded-2xl border bg-transparent border-gray-600 hover:bg-gray-800/70 transition-colors duration-300 ease-in-out",
                 item.color,
               )}
+              key={item.name}
             >
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8">
