@@ -17,6 +17,7 @@ export function Button({
   size = "default",
   uppercase,
   block,
+  iconPosition,
   icon,
   children,
   ...props
@@ -34,7 +35,7 @@ export function Button({
         props.className,
       )}
     >
-      {(icon && props.iconPosition === "left") && (
+      {(icon && iconPosition === "left") && (
         <span
           className={cn(
             typeof children !== 'undefined' ? "mr-2" : undefined,
@@ -47,7 +48,7 @@ export function Button({
         </span>
       )}
       <span>{children}</span>
-      {(icon && props.iconPosition === "right") && (
+      {(icon && iconPosition === "right") && (
         <span
           className={cn(
             typeof children !== 'undefined' ? "ml-2" : undefined,
